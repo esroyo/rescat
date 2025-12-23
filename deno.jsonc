@@ -1,0 +1,33 @@
+{
+    "tasks": {
+        "dev": "deno run -A --unstable-detect-cjs npm:astro@5 dev",
+        "build": "deno run -A --unstable-detect-cjs npm:astro@5 build",
+        // "preview": "deno run -A --unstable-detect-cjs npm:astro@5 preview",
+        "preview": "deno run -A jsr:@std/http/file-server dist/client",
+        "astro": "deno run -A --unstable-detect-cjs npm:astro@5"
+    },
+    "nodeModulesDir": "auto",
+    "imports": {
+        "@astrojs/internal-helpers": "npm:@astrojs/internal-helpers",
+        "@deno/astro-adapter": "npm:@deno/astro-adapter@^0.3.1",
+        "@oslojs/encoding": "npm:@oslojs/encoding",
+        "@xz/fonts": "npm:@xz/fonts@1.0.2",
+        "astro": "npm:astro@^5.11.0",
+        "clsx": "npm:clsx",
+        "cookie": "npm:cookie",
+        "cssesc": "npm:cssesc",
+        "devalue": "npm:devalue",
+        "es-module-lexer": "npm:es-module-lexer",
+        "html-escaper": "npm:html-escaper",
+        "kleur/colors": "npm:kleur/colors",
+        "neotraverse/modern": "npm:neotraverse/modern",
+        "p-limit": "npm:p-limit",
+        "sharp": "npm:sharp",
+        "unstorage": "npm:unstorage",
+        "zod": "npm:zod"
+    },
+    "fmt": {
+        "indentWidth": 4,
+        "singleQuote": true
+    }
+}

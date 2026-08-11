@@ -11,6 +11,7 @@
         "@astrojs/internal-helpers": "npm:@astrojs/internal-helpers",
         "@deno/astro-adapter": "npm:@deno/astro-adapter@^0.3.1",
         "@oslojs/encoding": "npm:@oslojs/encoding",
+        "@picocss/pico": "npm:@picocss/pico@2.1.1",
         "@xz/fonts": "npm:@xz/fonts@1.0.2",
         "astro": "npm:astro@^5.11.0",
         "clsx": "npm:clsx",
@@ -22,6 +23,7 @@
         "kleur/colors": "npm:kleur/colors",
         "neotraverse/modern": "npm:neotraverse/modern",
         "p-limit": "npm:p-limit",
+        "sass": "npm:sass@1.102.0",
         "sharp": "npm:sharp",
         "unstorage": "npm:unstorage",
         "zod": "npm:zod"

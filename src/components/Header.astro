@@ -1,0 +1,47 @@
+---
+import Logo from '../assets/rescat.svg';
+---
+<header>
+    <a href="/" id="logo">
+        <Logo width={'auto'} height={'5rem'} fill="currentColor"/>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="/context">Context</a></li>
+            <li><a href="/testimonies">Testimonis</a></li>
+            <li><a href="/about">Quant a</a></li>
+        </ul>
+    </nav>
+    <label id="language">Language
+        <select>
+            <option>Catalan</option>
+        </select>
+    </label>
+</header>
+<style>
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+#logo, #language {
+    align-self: center;
+    padding: 1rem;
+}
+nav {
+    flex-grow: 2;
+    align-self: center;
+}
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: grid;
+    list-style: none;
+}
+</style>

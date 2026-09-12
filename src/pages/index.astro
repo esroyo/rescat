@@ -1,31 +1,117 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Picture } from 'astro:assets';
+import joc1 from '../assets/joc-01.jpg';
+import joc2 from '../assets/joc-02.jpg';
+import joc3 from '../assets/joc-03.jpg';
 ---
 
-<Layout>
+<Layout description="Rescat, un joc d’equilibri cooperatiu sobre la migració i els drets humans.">
     <main>
-        <h2>Què és?</h2>
-“Rescat” és un joc d’equilibri cooperatiu
-dissenyat per a sensibilitzar sobre la migració
-i els drets humans, promovent l’empatia i
-la solidaritat. El joc representa les precàries
-condicions que afronten moltes persones
-migrants, especialment al llarg de la travessia
-per la mar cap a Europa, a bord d’embarcacions
-molt precàries i en condicions extremadament
-perilloses, que posen en greu risc les seues
-vides. A més, Rescat és un homenatge a
-l’arriscada i valenta tasca duta a terme per
-la flota de vaixells de rescat civil humanitari
-que, malgrat la persecució i els obstacles que
-pateixen per les actuals polítiques migratòries,
-continuen defensant la vida humana davant
-la passivitat i la inacció deliberada dels estats
-europeus.
+        <h1>Què és «Rescat»?</h1>
+
+        <div class="cards">
+            <article class="tile">
+                <p>“Rescat” és un joc d’equilibri cooperatiu
+                dissenyat per a sensibilitzar sobre la migració
+                i els drets humans, promovent l’empatia i
+                la solidaritat.</p>
+                <Picture src={joc1} alt="Foto del joc" />
+            </article>
+
+            <article class="tile">
+                <p>El joc representa les precàries
+                condicions que afronten moltes persones
+                migrants, especialment al llarg de la travessia
+                per la mar cap a Europa, a bord d’embarcacions
+                molt precàries i en condicions extremadament
+                perilloses, que posen en greu risc les seues
+                vides.</p>
+                <Picture src={joc2} alt="Foto del joc" />
+            </article>
+
+            <article class="tile">
+                <p>A més, Rescat és un homenatge a
+                l’arriscada i valenta tasca duta a terme per
+                la flota de vaixells de rescat civil humanitari
+                que, malgrat la persecució i els obstacles que
+                pateixen per les actuals polítiques migratòries,
+                continuen defensant la vida humana davant
+                la passivitat i la inacció deliberada dels estats
+                europeus.</p>
+                <Picture src={joc3} alt="Foto del joc" />
+            </article>
+        </div>
+
+        <hr class="divider" />
+
+        <section class="about">
+            <h2>Sols el poble salva el poble</h2>
+            <p>
+                Aquesta és la història d’<a href="/testimonies">Elvis, Natacha, Samira,
+                Yannick, Amin, Ali, Gemima, Alagie, Isatu, Mabel, Mamadou i Harum</a>,
+                alhora que també és la història de milers de persones
+                <a href="/context">desaparegudes en la mar</a> i de les seues famílies, que hauran de
+                viure per sempre amb el patiment d’un dol negat, una ferida oberta que mai
+                tancarà davant la incertesa sobre on estan els seus éssers estimats.
+                Actualment, els recursos emprats per a la recerca i identificació de persones
+                son insuficients. Falta molta informació i hi ha poca o nul·la disposició per part
+                de les autoritats. Però no sempre és igual, s’evidencia una desigualtat cruel entre
+                persones amb pocs i molts recursos econòmics.
+            </p>
+            <p>
+                Davant d’un sistema socioeconòmic injust, que multiplica el dolor profund i el
+                patiment extrem tant individual com social, cal col·lectivitzar el malestar, fent
+                créixer el suport mutu i les xarxes d’afectes com eines de resistència, l’empatia
+                la solidaritat entre pobles. I en aquest marc, l’Aurora Grup de Suport, entitat
+                nascuda al port de Borriana i dedicada a la cooperació amb entitats, militants i
+                vaixells de rescat humanitari a la mar, ha sigut una font d’inspiració per a Rescat.
+                Vam començar a cuinar RESCAT fa temps junt amb Vicent Aleixandre, fundador
+                de l’Aurora, dins del projecte “Artistes al Rescat”. Hem passat per moltes etapes,
+                molts canvis de decisions i molts obstacles, fins al punt de pensar que mai es
+                duria a terme, però finalment la necessitat de dignificar la vida i el treball de
+                tantes persones implicades en la defensa dels drets humans, ha possibilitat la
+                materialització del joc.
+            </p>
+            <p>
+                Gràcies Vicent per la dedicació i l’empenta a fer del món un lloc més humà. A tu,
+                company, et dediquem Rescat. Per fi l’hem acabat!
+            </p>
+        </section>
     </main>
 </Layout>
+
 <style>
-main {
-    align-self: start;
-}
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        gap: var(--pico-block-spacing-horizontal);
+        padding-inline: var(--pico-block-spacing-horizontal);
+    }
+
+    .tile p {
+        margin-top: 0;
+    }
+
+    .tile :global(img) {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: var(--pico-border-radius);
+        display: block;
+    }
+
+    .divider {
+        width: 100%;
+        margin-block: calc(2 * var(--pico-block-spacing-vertical));
+        border-color: var(--pico-muted-color);
+        opacity: 0.4;
+    }
+
+    @media (max-width: 700px) {
+        .cards {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>

@@ -1,25 +1,81 @@
 ---
-import { description, title } from '../common.ts';
+import { description as defaultDescription, title as defaultTitle } from '../common.ts';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const { title = defaultTitle, description = defaultDescription } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={ Astro.generator } />
         <meta name="description" content={ description } />
         <title>{ title }</title>
 	</head>
 	<body>
-        <Header /> 
+        <Header />
 		<slot />
         <Footer />
 	</body>
 </html>
 <style is:global>
+@font-face {
+  font-family: 'Syncopate';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/syncopate-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Syncopate';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/syncopate-400-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Syncopate';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/syncopate-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Syncopate';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/syncopate-700-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root h1,
+:root h2,
+:root h3,
+:root h4,
+:root h5,
+:root h6 {
+    font-family: 'Syncopate', var(--pico-font-family), sans-serif;
+    text-transform: uppercase;
+}
+
+:root h1.plain,
+:root h2.plain,
+:root h3.plain,
+:root h4.plain,
+:root h5.plain,
+:root h6.plain {
+    font-family: var(--pico-font-family);
+    text-transform: none;
+}
+
 :root {
   --pico-muted-background: #EAE3DB;
 }
@@ -70,31 +126,27 @@ a:hover {
     text-decoration: underline;
 }
 
-body {
-    display: grid;
-    grid-template-rows: fit-content(4rem) auto fit-content(4rem);
-    grid-template-areas: "header" "main" "footer";
-}
-header {
-    display: grid;
-    grid-area: header;
-    border-bottom: .2rem dotted var(--nc-bg-2);
-}
-main {
-    display: grid;
-    grid-area: main;
-    margin: 0 10rem;
-}
+header,
 footer {
+    padding-inline: var(--pico-block-spacing-horizontal);
+}
+
+.dual {
     display: grid;
-    grid-area: footer;
-};
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 700px) {
+  .dual { 
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 <style lang="scss" is:global>
 @use "@picocss/pico/scss/pico" with (
   $theme-color: "orange",
-  $enable-semantic-container: true,
-  $enable-classes: false,
+  $enable-semantic-container: false,
+  $enable-classes: true,
   $modules: (
     // Layout
     "layout/document": true,
@@ -108,14 +160,14 @@ footer {
     "content/link": true,
     "content/typography": true,
     "content/embedded": false,
-    "content/button": false,
+    "content/button": true,
     "content/table": false,
     "content/code": false,
     "content/figure": true,
     "content/misc": true,
 
     // Forms
-    "forms/basics": false,
+    "forms/basics": true,
     "forms/checkbox-radio-switch": false,
     "forms/input-color": false,
     "forms/input-date": false,
@@ -124,13 +176,13 @@ footer {
     "forms/input-search": false,
 
     // Components
-    "components/accordion": false,
+    "components/accordion": true,
     "components/card": false,
-    "components/dropdown": false,
-    "components/group": false,
+    "components/dropdown": true,
+    "components/group": true,
     "components/loading": false,
     "components/modal": false,
-    "components/nav": false,
+    "components/nav": true,
     "components/progress": false,
     "components/tooltip": false,
 

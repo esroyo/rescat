@@ -1,13 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Picture } from 'astro:assets';
+import laMar from '../assets/la-mar.png';
 import mapaZonesSar from '../assets/mapa-zones-sar.png';
+import flota1 from '../assets/flota-01.png';
 import flota2 from '../assets/flota-02.png';
+import flota3 from '../assets/flota-03.png';
+import flota4 from '../assets/flota-04.png';
+import flota5 from '../assets/flota-05.png';
+import mapaAfrica from '../assets/mapa-africa.png';
 ---
 
 <Layout>
     <main>
+        <article>
+        <section class="mar">
         <h2>La Mar, entre la vida i la mort</h2>
+        <img src={laMar.src} width={'60%'} />
         <p>
             La mar, espai d’intercanvi cultural i econòmic entre pobles,
             s’ha convertit, en ple segle XXI, en una frontera mortífera cap a
@@ -30,6 +39,10 @@ import flota2 from '../assets/flota-02.png';
             tràfic de persones. Així, Europa no només tanca fronteres, també
             tanca els ulls davant la tragèdia que ella mateixa alimenta.
         </p>
+        </section>
+        </article>
+
+        <article>
         <h2>Quan la zona SAR ofega</h2>
         <p>
             Segons el dret marítim, i els drets humans, els estats tenen l’obligació d’auxiliar qualsevol embarcació en
@@ -48,6 +61,8 @@ import flota2 from '../assets/flota-02.png';
             en molts casos, s’empenta cap a rutes més llargues, més precàries i molt més letals.
         </p>
 
+        <div class="dual">
+        <section>
         <h3>Zona SAR Mediterrània</h3>
         <p>
             El Mediterrani és una de les zones de rescat més actives
@@ -60,6 +75,8 @@ import flota2 from '../assets/flota-02.png';
             tensió política i humanitària, on la protecció de la vida
             humana no sempre és prioritària.
         </p>
+        </section>
+        <section>
         <h3>Zona SAR Atlàntica</h3>
         <p>
             Tot i la disminució de trànsit migratori, aquesta ruta
@@ -73,10 +90,16 @@ import flota2 from '../assets/flota-02.png';
             fronteres deixen un buit de protecció que converteix
             aquesta ruta en una de les més perilloses i letals del món.
         </p>
+        </section>
+        </div>
+        </article>
 
         <Picture src={mapaZonesSar} alt="Mapa de les zones SAR Mediterrània i Atlàntica" />
-        
+
+        <article>
         <h2>La flota civil de rescat humanitari</h2>
+        <div class="dual">
+        <section>
         <p>
             La flota civil humanitària és un terme
             que engloba els vaixells operats per
@@ -93,6 +116,8 @@ import flota2 from '../assets/flota-02.png';
             principis de la Declaració Universal dels
             Drets Humans.
         </p>
+        </section>
+        <section>
         <p>
             La gestió dels operatius recau en les ONG, mentre que
             la navegació i la seguretat marítima són responsabilitat
@@ -101,10 +126,11 @@ import flota2 from '../assets/flota-02.png';
             del seu lloc de residència a causa de conflictes armats,
             violència, persecució o pobresa.
         </p>
+        <img src={flota1.src} width={'80%'} />
+        </section>
+        </div>
 
-        <hr />
-
-        <section class="with-image black">
+        <section class="dual ship black">
             <p>
                 Aquest model de rescat civil va agafar força
                 arran de la guerra de Síria, al 2012, quan
@@ -123,6 +149,8 @@ import flota2 from '../assets/flota-02.png';
             <img src={flota2.src} width={'80%'} />
         </section>
 
+        <section class="dual ship red">
+            <img src={flota3.src} width={'80%'} />
         <p>
             Malgrat que cada vegada augmenten més les traves
             administratives i la criminalització, les flotes de
@@ -135,7 +163,10 @@ import flota2 from '../assets/flota-02.png';
             societat civil amb l’objectiu de trencar el bloqueig
             israelià de la Franja de Gaza.
         </p>
+        </section>
 
+        <section class="dual ship red">
+            <img src={flota4.src} width={'80%'} />
         <p>
             Destaquem alguns dels vaixells en
             actiu que formen part de la flota civil
@@ -150,7 +181,9 @@ import flota2 from '../assets/flota-02.png';
             tots, volem fer un reconeixement a la seua
             tasca i a la força que els uneix.
         </p>
+        </section>
 
+        <section class="dual ship sand">
         <p>
             També cal visibilitzar a altres
             organitzacions que realitzen tasques
@@ -159,24 +192,25 @@ import flota2 from '../assets/flota-02.png';
             com són l’Aurora Grup de Suport i
             l’Association Pilotes Volontaires.
         </p>
+            <img src={flota5.src} width={'80%'} />
+        </section>
+        </article>
 
+        <article>
+        <section class="africa">
         <h2>Per què un mapa d'Africa?</h2>
+        <img src={mapaAfrica.src} width={'60%'} />
         <p>
             Una primera ullada al mapa d’Àfrica ens retorna la visió d’un continent
             ric i divers. La immensa riquesa en recursos naturals resulta paradoxal
-
-
-            per Què
             quan aquesta font de prosperitat esdevé, alhora, una tragèdia social
             i ambiental. Al llarg de segles, el colonialisme europeu ha explotat
             amb intensitat els recursos del continent, deixant territoris fragmentats,
             economies depenents i estructures polítiques fràgils i corruptes.
-
-            UN MAPA     Aquest llegat encara perdura, perpetuant conflictes estructurals i xarxes
+            Aquest llegat encara perdura, perpetuant conflictes estructurals i xarxes
             clientelars que augmenten la pobresa i la desigualtat social. Guerres, com
             la del Sudan o el Congo, s’alimenten de la lluita pel control del petroli,
-
-            D’ÀFRICA?   els metalls preciosos o els minerals de terres rares, imprescindibles per
+            els metalls preciosos o els minerals de terres rares, imprescindibles per
             a la tecnologia moderna. Altres territoris esdevenen abocadors il·legals,
             com són els casos de Guinea o Somàlia, que han rebut, o reben, tones
             de residus tèxtils o sanitaris procedents del consum insostenible
@@ -191,6 +225,8 @@ import flota2 from '../assets/flota-02.png';
             que ingressa immenses fortunes amb la seguretat i la militarització de
             les fronteres.
         </p>
+        </section>
+        </article>
 
     </main>
 </Layout>
@@ -200,22 +236,43 @@ main {
 }
 
 .black {
-    background: black;
-        p { color: var(--pico-background-color); }
+    background: var(--pico-contrast-background);
+    p { color: var(--pico-background-color); }
 }
 
-section.with-image {
-    padding: 2rem 0;
+.red {
+    background: var(--pico-primary-background);
+    p { color: var(--pico-background-color); }
+}
+
+.sand {
+    background: var(--pico-muted-background);
+}
+
+.africa,
+.mar {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+    img { grid-column: 1 }
+}
+
+.ship {
+    padding: 2rem 0;
     gap: 2rem;
     align-items: center;
-        p { margin: 0 8rem; }
+    p { margin: 0 8rem; }
 }
 
 @media (max-width: 700px) {
-  section.with-image {
+  .africa,
+  .mar {
     grid-template-columns: 1fr;
+    img { grid-column: auto }
   }
+  .ship {
+    p { margin: 0 2rem; }
+}
 }
 </style>

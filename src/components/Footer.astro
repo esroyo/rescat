@@ -1,16 +1,34 @@
 ---
-import footerDecoration from '../assets/footer-decoration.png';
+import { Image } from 'astro:assets';
+import vaneCarmela from '../assets/vane-carmela.png';
 ---
-<footer>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <img src={footerDecoration.src} />
+<footer class="dual">
+    <section>
+    <h3>Crèdits</h3>
+    <dl>
+        <dt>Disseny original i desenvolupament tècnic</dt>
+        <dd>Carmela Forés · <a href="#">@lafores</a></dd>
+        <dt>Il·lustració i gràfica</dt>
+        <dd>Vane Julian · <a href="#">www.vanejulian.com</a> · <a href="#">@vanejulian_</a></dd>
+        <dt>Creació continguts del llibret de navegació</dt>
+        <dd>Carmela Forés i Vane Julian</dd>
+        <dt>Direcció d’art</dt>
+        <dd>Vane Julian i Carmela Forés</dd>
+    </dl>
+    </section>
+    <Image alt="Vane i Carmela" src={vaneCarmela} layout={'constrained'}  />
 </footer>
 <style>
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    footer {
+        margin-top: var(--pico-block-spacing-vertical);
+        align-items: center;
+        justify-items: center;
+        background: var(--pico-primary-background);
+        color: var(--pico-primary-inverse);
+        h3,
+        dl,
+    a:link,
+    a:hover,
+    a:active,
+    a:visited { color: inherit; }
 </style>

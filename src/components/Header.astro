@@ -1,47 +1,52 @@
 ---
 import Logo from '../assets/rescat.svg';
+import MenuIconContext from '../assets/menu-icon-context.svg';
+import MenuIconTestimonis from '../assets/menu-icon-testimonis.svg';
 ---
 <header>
-    <a href="/" id="logo">
-        <Logo width={'auto'} height={'5rem'} fill="currentColor"/>
-    </a>
     <nav>
         <ul>
-            <li><a href="/context">Context</a></li>
-            <li><a href="/testimonies">Testimonis</a></li>
-            <li><a href="/about">Quant a</a></li>
+            <li>
+                <a href="/" id="logo">
+                    <Logo width={'auto'} height={'5rem'} fill="currentColor" />
+                </a>
+            </li>
+            <li>Una operació a mar oberta</li>
+        </ul>
+        <ul>
+            <li><a href="/context" class="constrast" ><MenuIconContext class="menu-icon" width={'auto'} height={'1.25rem'} fill="currentColor" aria-hidden />Context</a></li>
+            <li><a href="/testimonies" class="constrast"><MenuIconTestimonis class="menu-icon" width={'auto'} height={'1.25rem'} fill="currentColor" aria-hidden />Testimonis</a></li>
+            <li>
+                <details class="dropdown">
+                    <summary>
+                        Language
+                    </summary>
+                    <ul dir="rtl">
+                        <li><a href="#">Catalan</a></li>
+                    </ul>
+                </details>
+            </li>
         </ul>
     </nav>
-    <label id="language">Language
-        <select>
-            <option>Catalan</option>
-        </select>
-    </label>
 </header>
 <style>
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+#logo {
+    color: #090b0b;
 }
-#logo, #language {
-    align-self: center;
-    padding: 1rem;
+#logo:hover {
+    color: var(--pico-primary);
 }
-nav {
-    flex-grow: 2;
-    align-self: center;
+a.constrast {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(0.5 * var(--pico-spacing));
 }
-ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    justify-items: center;
-    margin: 0;
-    padding: 0;
+nav ul:last-of-type {
+    gap: var(--pico-spacing);
 }
-li {
-    display: grid;
-    list-style: none;
+@media (max-width: 700px) {
+  nav {
+      flex-wrap: wrap;
+  }
 }
 </style>

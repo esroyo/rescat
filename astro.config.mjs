@@ -5,7 +5,7 @@ import deno from '@deno/astro-adapter';
 // https://astro.build/config
 export default defineConfig({
     image: {
-        layout: 'full-width',
+        layout: 'constrained',
         responsiveStyles: true,
     },
     output: 'static',

@@ -1,5 +1,5 @@
 ---
-import Logo from '../assets/rescat.svg';
+import Logo from '../assets/rescat-title.svg';
 import MenuIconContext from '../assets/menu-icon-context.svg';
 import MenuIconTestimonis from '../assets/menu-icon-testimonis.svg';
 ---
@@ -8,10 +8,10 @@ import MenuIconTestimonis from '../assets/menu-icon-testimonis.svg';
         <ul>
             <li>
                 <a href="/" id="logo">
-                    <Logo width={'auto'} height={'5rem'} fill="currentColor" />
+                    <Logo width={'auto'} height={'4rem'} fill="currentColor" />
                 </a>
             </li>
-            <li>Una operació a mar oberta</li>
+            <li class="subtitle">Una operació a mar oberta</li>
         </ul>
         <ul>
             <li><a href="/context" class="constrast" ><MenuIconContext class="menu-icon" width={'auto'} height={'1.25rem'} fill="currentColor" aria-hidden />Context</a></li>
@@ -45,8 +45,10 @@ nav ul:last-of-type {
     gap: var(--pico-spacing);
 }
 @media (max-width: 700px) {
+  .subtitle { display: none; }
   nav {
       flex-wrap: wrap;
+      justify-content: center;
   }
 }
 </style>

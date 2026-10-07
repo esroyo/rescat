@@ -1,87 +1,163 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Picture } from 'astro:assets';
-import joc1 from '../assets/joc-01.jpg';
 import joc2 from '../assets/joc-02.jpg';
 import joc3 from '../assets/joc-03.jpg';
+import joc4 from '../assets/joc-04.jpg';
+import joc5 from '../assets/joc-05.jpg';
+import joc6 from '../assets/joc-06.jpg';
+import joc7 from '../assets/joc-07.jpg';
+import joc8 from '../assets/joc-08.jpg';
+import joc9 from '../assets/joc-09.jpg';
+import vaixellContext from '../assets/foto-vaixell-02.jpg';
+import vaixellTestimonis from '../assets/foto-vaixell-01.jpg';
+import MenuIconContext from '../assets/menu-icon-context.svg';
+import MenuIconTestimonis from '../assets/menu-icon-testimonis.svg';
 ---
 
 <Layout description="Rescat, un joc d’equilibri cooperatiu sobre la migració i els drets humans.">
-    <main>
-        <h1>Què és «Rescat»?</h1>
-
-        <div class="cards">
-            <article class="tile">
-                <p>“Rescat” és un joc d’equilibri cooperatiu
-                dissenyat per a sensibilitzar sobre la migració
-                i els drets humans, promovent l’empatia i
-                la solidaritat.</p>
-                <Picture src={joc1} alt="Foto del joc" />
-            </article>
-
-            <article class="tile">
-                <p>El joc representa les precàries
-                condicions que afronten moltes persones
-                migrants, especialment al llarg de la travessia
-                per la mar cap a Europa, a bord d’embarcacions
-                molt precàries i en condicions extremadament
-                perilloses, que posen en greu risc les seues
-                vides.</p>
-                <Picture src={joc2} alt="Foto del joc" />
-            </article>
-
-            <article class="tile">
-                <p>A més, Rescat és un homenatge a
-                l’arriscada i valenta tasca duta a terme per
-                la flota de vaixells de rescat civil humanitari
-                que, malgrat la persecució i els obstacles que
-                pateixen per les actuals polítiques migratòries,
-                continuen defensant la vida humana davant
-                la passivitat i la inacció deliberada dels estats
-                europeus.</p>
-                <Picture src={joc3} alt="Foto del joc" />
-            </article>
+    <section class="hero">
+        <div class="hero-slides">
+            <div class="hero-track">
+                <div class="hero-slide" aria-hidden="true">
+                    <Picture src={joc2} alt="" sizes="100vw" loading="lazy" decoding="async" />
+                </div>
+                <div class="hero-slide" aria-hidden="true">
+                    <Picture src={joc5} alt="" sizes="100vw" loading="lazy" decoding="async" />
+                </div>
+                <div class="hero-slide" aria-hidden="true">
+                    <Picture src={joc7} alt="" sizes="100vw" loading="lazy" decoding="async" />
+                </div>
+                <div class="hero-slide" aria-hidden="true">
+                    <Picture src={joc9} alt="" sizes="100vw" loading="lazy" decoding="async" />
+                </div>
+                <div class="hero-slide" aria-hidden="true">
+                    <Picture src={joc3} alt="" sizes="100vw" loading="lazy" decoding="async" />
+                </div>
+            </div>
         </div>
+        <div class="hero-overlay">
+            <h1>Què és «Rescat»?</h1>
+            <p class="tagline">Un joc d’equilibri cooperatiu sobre la migració i els drets humans</p>
+        </div>
+    </section>
 
-        <hr class="divider" />
+    <main>
+        <section class="intro">
+            <div class="cards">
+                <article class="tile">
+                    <p>“Rescat” és un joc d’equilibri cooperatiu
+                    dissenyat per a sensibilitzar sobre la migració
+                    i els drets humans, promovent l’empatia i
+                    la solidaritat.</p>
+                </article>
 
-        <section class="about">
-            <h2>Sols el poble salva el poble</h2>
-            <p>
-                Aquesta és la història d’<a href="/testimonies">Elvis, Natacha, Samira,
-                Yannick, Amin, Ali, Gemima, Alagie, Isatu, Mabel, Mamadou i Harum</a>,
-                alhora que també és la història de milers de persones
-                <a href="/context">desaparegudes en la mar</a> i de les seues famílies, que hauran de
-                viure per sempre amb el patiment d’un dol negat, una ferida oberta que mai
-                tancarà davant la incertesa sobre on estan els seus éssers estimats.
-                Actualment, els recursos emprats per a la recerca i identificació de persones
-                son insuficients. Falta molta informació i hi ha poca o nul·la disposició per part
-                de les autoritats. Però no sempre és igual, s’evidencia una desigualtat cruel entre
-                persones amb pocs i molts recursos econòmics.
-            </p>
-            <p>
-                Davant d’un sistema socioeconòmic injust, que multiplica el dolor profund i el
-                patiment extrem tant individual com social, cal col·lectivitzar el malestar, fent
-                créixer el suport mutu i les xarxes d’afectes com eines de resistència, l’empatia
-                la solidaritat entre pobles. I en aquest marc, l’Aurora Grup de Suport, entitat
-                nascuda al port de Borriana i dedicada a la cooperació amb entitats, militants i
-                vaixells de rescat humanitari a la mar, ha sigut una font d’inspiració per a Rescat.
-                Vam començar a cuinar RESCAT fa temps junt amb Vicent Aleixandre, fundador
-                de l’Aurora, dins del projecte “Artistes al Rescat”. Hem passat per moltes etapes,
-                molts canvis de decisions i molts obstacles, fins al punt de pensar que mai es
-                duria a terme, però finalment la necessitat de dignificar la vida i el treball de
-                tantes persones implicades en la defensa dels drets humans, ha possibilitat la
-                materialització del joc.
-            </p>
-            <p>
-                Gràcies Vicent per la dedicació i l’empenta a fer del món un lloc més humà. A tu,
-                company, et dediquem Rescat. Per fi l’hem acabat!
-            </p>
+                <article class="tile">
+                    <p>El joc representa les precàries
+                    condicions que afronten moltes persones
+                    migrants, especialment al llarg de la travessia
+                    per la mar cap a Europa, a bord d’embarcacions
+                    molt precàries i en condicions extremadament
+                    perilloses, que posen en greu risc les seues
+                    vides.</p>
+                </article>
+
+                <article class="tile">
+                    <p>A més, Rescat és un homenatge a
+                    l’arriscada i valenta tasca duta a terme per
+                    la flota de vaixells de rescat civil humanitari
+                    que, malgrat la persecució i els obstacles que
+                    pateixen per les actuals polítiques migratòries,
+                    continuen defensant la vida humana davant
+                    la passivitat i la inacció deliberada dels estats
+                    europeus.</p>
+                </article>
+            </div>
         </section>
+
+        <nav class="section-nav" aria-label="Seccions">
+            <a href="/context" class="nav-box context">
+                <Picture class="nav-bg" src={vaixellContext} alt="" aria-hidden="true" />
+                <span class="nav-content">
+                    <span class="arrow" aria-hidden="true">←</span>
+                    <MenuIconContext class="nav-icon" width={'auto'} height={'2.5rem'} fill="currentColor" aria-hidden />
+                    <span class="nav-title">Context</span>
+                    <small>La mar, les zones SAR i la flota civil de rescat</small>
+                </span>
+            </a>
+            <a href="/testimonies" class="nav-box testimonis">
+                <Picture class="nav-bg" src={vaixellTestimonis} alt="" aria-hidden="true" />
+                <span class="nav-content">
+                    <span class="arrow" aria-hidden="true">→</span>
+                    <MenuIconTestimonis class="nav-icon" width={'auto'} height={'2.5rem'} fill="currentColor" aria-hidden />
+                    <span class="nav-title">Testimonis</span>
+                    <small>Històries d’arriscar la vida durant la travessia</small>
+                </span>
+            </a>
+        </nav>
     </main>
 </Layout>
 
 <style>
+    .hero {
+        position: relative;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        max-height: 75vh;
+        overflow: hidden;
+    }
+
+    .hero-slides {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 21 / 9;
+        max-height: 75vh;
+        overflow: hidden;
+    }
+
+    .hero-track {
+        display: flex;
+        height: 100%;
+        transition: transform 0.9s ease;
+    }
+
+    .hero-slide {
+        flex: 0 0 100%;
+        height: 100%;
+    }
+
+    .hero-slide :global(img) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: calc(2 * var(--pico-block-spacing-vertical)) var(--pico-block-spacing-horizontal);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        color: #fff;
+    }
+
+    .hero-overlay h1 {
+        margin-bottom: calc(0.5 * var(--pico-spacing));
+        color: #fff;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .tagline {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #fff;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .intro {
+        padding-block: calc(2 * var(--pico-block-spacing-vertical));
+    }
+
     .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -91,27 +167,180 @@ import joc3 from '../assets/joc-03.jpg';
     }
 
     .tile p {
-        margin-top: 0;
+        margin: 0;
     }
 
-    .tile :global(img) {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
+    .section-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--pico-spacing);
+        padding-inline: var(--pico-block-spacing-horizontal);
+        padding-bottom: calc(2 * var(--pico-block-spacing-vertical));
+    }
+
+    .nav-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(0.75 * var(--pico-spacing));
+        aspect-ratio: 1 / 1;
+        min-height: 260px;
+        padding: calc(2 * var(--pico-spacing));
         border-radius: var(--pico-border-radius);
+        text-align: center;
+        text-decoration: none;
+        overflow: hidden;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-box:hover {
+        text-decoration: none;
+        transform: translateY(-4px);
+    }
+
+    .nav-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .nav-bg :global(img) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: block;
     }
 
-    .divider {
-        width: 100%;
-        margin-block: calc(2 * var(--pico-block-spacing-vertical));
-        border-color: var(--pico-muted-color);
-        opacity: 0.4;
+    .nav-box.context .nav-bg :global(img) {
+        opacity: 0.3;
+    }
+
+    .nav-box.testimonis .nav-bg :global(img) {
+        opacity: 0.2;
+    }
+
+    .nav-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(0.75 * var(--pico-spacing));
+        padding: calc(2 * var(--pico-spacing));
+        border-radius: var(--pico-border-radius);
+    }
+
+    .nav-box.context .nav-content {
+        background: rgba(206, 51, 29, 0.85);
+    }
+
+    .nav-box.testimonis .nav-content {
+        background: rgba(206, 51, 29, 0.85);
+    }
+
+    .nav-box.context {
+        background: var(--pico-primary-background);
+        color: var(--pico-primary-inverse);
+    }
+
+    .nav-box.context:hover {
+        background: var(--pico-primary-hover-background);
+    }
+
+    .nav-box.testimonis {
+        background: var(--pico-primary-background);
+        color: var(--pico-primary-inverse);
+    }
+
+    .nav-box.testimonis:hover {
+        background: var(--pico-primary-hover-background);
+    }
+
+    .nav-box .arrow {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .nav-box small {
+        opacity: 0.85;
+        font-size: 0.85rem;
+    }
+
+    .nav-title {
+        font-family: 'Syncopate', var(--pico-font-family), sans-serif;
+        text-transform: uppercase;
+        font-size: 1.25rem;
     }
 
     @media (max-width: 700px) {
         .cards {
             grid-template-columns: 1fr;
         }
+
+        .section-nav {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-slides {
+            aspect-ratio: 4 / 5;
+            max-height: 80vh;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero-track {
+            transition: none;
+        }
     }
 </style>
+
+<script>
+    const track = document.querySelector('.hero-track');
+    const slides = document.querySelectorAll('.hero-slide');
+    if (track && slides.length > 1) {
+        // Clone first slide at the end for a seamless forward loop
+        const clone = slides[0].cloneNode(true);
+        track.appendChild(clone);
+
+        const total = slides.length;
+        const ms = 3000;
+        let index = 0;
+
+        const goTo = (i) => {
+            track.style.transform = `translateX(-${i * 100}%)`;
+            slides.forEach((s, n) => {
+                const isActive = n === i % total;
+                s.classList.toggle('is-active', isActive);
+                if (isActive) {
+                    s.removeAttribute('aria-hidden');
+                } else {
+                    s.setAttribute('aria-hidden', 'true');
+                }
+            });
+        };
+
+        // Snap back to slide 0 without animation after sliding onto the clone
+        track.addEventListener('transitionend', () => {
+            if (index === total) {
+                track.style.transition = 'none';
+                index = 0;
+                goTo(0);
+                // Force reflow so the transition restore takes effect
+                void track.offsetWidth;
+                track.style.transition = '';
+            }
+        });
+
+        setTimeout(function change() {
+            if (!document.hidden) {
+                index += 1;
+                goTo(index);
+                const isLast = index === total - 1;
+                setTimeout(change, isLast ? ms * 5 : ms);
+            }
+        }, ms * 2);
+    }
+</script>

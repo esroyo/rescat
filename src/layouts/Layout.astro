@@ -131,6 +131,14 @@ footer {
     padding-inline: var(--pico-block-spacing-horizontal);
 }
 
+/* Guard against horizontal scroll from full-bleed (100vw) sections
+   and Pico's negative nav margins. `clip` (unlike `hidden`) doesn't
+   create a scroll container, so sticky/fixed descendants keep working. */
+html,
+body {
+    overflow-x: clip;
+}
+
 .dual {
     display: grid;
     grid-template-columns: 1fr 1fr;

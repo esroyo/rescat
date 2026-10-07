@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageBand from '../components/PageBand.astro';
 import { Picture } from 'astro:assets';
+import bandaContext from '../assets/foto-vaixell-03.jpg';
 import laMar from '../assets/la-mar.png';
-import mapaZonesSar from '../assets/mapa-zones-sar.png';
+import mapaZonesSar from '../assets/mapa-zones-sar.jpg';
 import flota1 from '../assets/flota-01.png';
 import flota2 from '../assets/flota-02.png';
 import flota3 from '../assets/flota-03.png';
@@ -12,6 +14,7 @@ import mapaAfrica from '../assets/mapa-africa.png';
 ---
 
 <Layout>
+    <PageBand image={bandaContext} title="Context" objectPosition="center 65%" />
     <main>
         <article>
         <section class="mar">
@@ -94,7 +97,7 @@ import mapaAfrica from '../assets/mapa-africa.png';
         </div>
         </article>
 
-        <Picture src={mapaZonesSar} alt="Mapa de les zones SAR Mediterrània i Atlàntica" />
+        <Picture class="full-bleed" src={mapaZonesSar} alt="Mapa de les zones SAR Mediterrània i Atlàntica" sizes="100vw" />
 
         <article>
         <h2>La flota civil de rescat humanitari</h2>
@@ -165,8 +168,8 @@ import mapaAfrica from '../assets/mapa-africa.png';
         </p>
         </section>
 
-        <section class="dual ship red">
-            <img src={flota4.src} width={'80%'} />
+        <section class="dual ship sand">
+            <img src={flota5.src} width={'80%'} />
         <p>
             Destaquem alguns dels vaixells en
             actiu que formen part de la flota civil
@@ -183,7 +186,7 @@ import mapaAfrica from '../assets/mapa-africa.png';
         </p>
         </section>
 
-        <section class="dual ship sand">
+        <section class="dual ship red">
         <p>
             També cal visibilitzar a altres
             organitzacions que realitzen tasques
@@ -192,7 +195,7 @@ import mapaAfrica from '../assets/mapa-africa.png';
             com són l’Aurora Grup de Suport i
             l’Association Pilotes Volontaires.
         </p>
-            <img src={flota5.src} width={'80%'} />
+            <img src={flota4.src} width={'80%'} />
         </section>
         </article>
 
@@ -233,6 +236,15 @@ import mapaAfrica from '../assets/mapa-africa.png';
 <style>
 main {
     align-self: start;
+    padding-inline: var(--pico-block-spacing-horizontal);
+}
+
+article h2 {
+    margin-top: calc(2.5 * var(--pico-block-spacing-vertical));
+}
+
+article h3 {
+    margin-top: calc(1.5 * var(--pico-block-spacing-vertical));
 }
 
 .black {
@@ -255,14 +267,52 @@ main {
     grid-template-columns: 1fr 2fr;
     justify-items: center;
     align-items: center;
-    img { grid-column: 1 }
+    gap: var(--pico-block-spacing-horizontal);
+    img {
+        grid-column: 1;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.dual {
+    gap: var(--pico-block-spacing-horizontal);
+}
+
+.dual img {
+    display: block;
+    margin-inline: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.full-bleed {
+    display: block;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+.full-bleed :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .ship {
-    padding: 2rem 0;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 2rem var(--pico-block-spacing-horizontal);
     gap: 2rem;
     align-items: center;
-    p { margin: 0 8rem; }
+    p {
+        max-width: 65ch;
+        margin-inline: auto;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 700px) {
@@ -271,8 +321,5 @@ main {
     grid-template-columns: 1fr;
     img { grid-column: auto }
   }
-  .ship {
-    p { margin: 0 2rem; }
-}
 }
 </style>

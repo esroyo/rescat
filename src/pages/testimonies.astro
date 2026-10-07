@@ -1,6 +1,8 @@
 ---
 import { Picture } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import PageBand from '../components/PageBand.astro';
+import bandaTestimonis from '../assets/joc-01.jpg';
 import testimoniElvis from '../assets/testimoni-elvis.png';
 import testimoniElvisIcon from '../assets/testimoni-elvis-icona-01.png';
 import testimoniNatacha from '../assets/testimoni-natacha.png';
@@ -30,8 +32,9 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
 ---
 
 <Layout>
+    <PageBand image={bandaTestimonis} title="Testimonis" />
     <main>
-        <h2>Testimonis de vida, per què se'n van de casa seua i arrisquen la vida?</h2>
+        <h2>Per què se'n van de casa seua i arrisquen la vida?</h2>
         <article class="case">
             <section class="person">
                 <div class="name">
@@ -41,6 +44,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniElvisIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniElvis} alt="Il·lustració d'Elvis" />
                 <p>
                     Imagina que has de deixar el teu poble per motius 
                     religiosos. Després de passar per Níger i travessar 
@@ -57,7 +61,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     i hi ha altres 50 migrants amb tu.
                 </p>
             </section>
-            <Picture src={testimoniElvis} alt="Il·lustració d'Elvis" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4>
@@ -110,6 +113,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                         <img src={testimoniNatachaIcon1.src} width={'65%'} /><img src={testimoniNatachaIcon2.src} width={'35%'} />
                     </div>
                 </div>
+                <Picture src={testimoniNatacha} alt="Il·lustració de Natacha" />
                 <p>
                     Imagina que estàs fugint del teu país 
                     per la pobresa, no et queden més 
@@ -126,7 +130,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     pastera, arriscant la vida de les dues.
                 </p>
             </section>
-            <Picture src={testimoniNatacha} alt="Il·lustració de Natacha" />
             <section class="state">
                 <hgroup><h4>Situació actual</h4><h4>Costa d’Ivori</h4></hgroup>
                 <dl>
@@ -170,6 +173,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniSamiraIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniSamira} alt="Il·lustració de Samira" />
                 <p>
                     Imagina que a causa de la guerra et 
                     quedes òrfena, has de fugir del teu 
@@ -195,7 +199,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     trajecte.
                 </p>
             </section>
-            <Picture src={testimoniSamira} alt="Il·lustració de Samira" />
             <section class="state">
                 <hgroup><h4>Situació actual</h4><h4>Iemen</h4></hgroup>
                 <dl>
@@ -239,6 +242,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniYannickIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniYannick} alt="Il·lustració de Yannick" />
                 <p>
                     Imagina que, per culpa dels 
                     maltractaments familiars, prefereixes 
@@ -258,7 +262,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     flota civil humanitària.
                 </p>
             </section>
-            <Picture src={testimoniYannick} alt="Il·lustració de Yannick" />
             <section class="state">
                 <hgroup><h4>Situació actual</h4><h4>Camerun</h4></hgroup>
                 <dl>
@@ -301,6 +304,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniAminIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniAmin} alt="Il·lustració d'Amin" />
                 <p>
                     Imagina que has de fugir del teu país a causa de la fam i de 
                     la falta d’oportunitats. No saps on vas, travesses Iemen (país 
@@ -313,7 +317,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     pastera.
                 </p>
             </section>
-            <Picture src={testimoniAmin} alt="Il·lustració d'Amin" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4>
@@ -360,6 +363,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniAliIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniAli} alt="Il·lustració d'Ali" />
                 <p>Imagina que, fugint de la guerra, pagues 1.500€ per un passatge en la companyia Cham Wing que et porta a Líbia. Allí t’espera una 
                     persona que et lleva el passaport i et porta a una casa amb 160 persones més que també esperen viatjar a Europa. Només hi ha un 
                     bany, una cuina menuda i molta humitat i parets florides. Agafes sarna per no tenir llum natural. Menges dos cops al dia “un tros de 
@@ -367,7 +371,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     perquè encara no és el teu torn. Dies després te n’assabentes que el vaixell ha naufragat i han mort 79 persones.
                 </p>
             </section>
-            <Picture src={testimoniAli} alt="Il·lustració d'Ali" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4>
@@ -411,6 +414,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniGeminaIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniGemina} alt="Il·lustració de Gemina" />
                 <p>
                     Imagina que travesses el desert en una camioneta 
                     plena de gom a gom. Després de cinc dies de viatge 
@@ -425,7 +429,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     disparen,… fins que puges a una llanxa.
                 </p>
             </section>
-            <Picture src={testimoniGemina} alt="Il·lustració de Gemina" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4>
@@ -471,6 +474,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniAlagieIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniAlagie} alt="Il·lustració d'Alagie" />
                 <p>
                     Imagina que després de cinc mesos de viatge pel desert del Sàhara, arribes 
                     a la frontera de Líbia i els traficants et roben tot el que portes, excepte la 
@@ -482,7 +486,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     un dels afortunats.
                 </p>
             </section>
-            <Picture src={testimoniAlagie} alt="Il·lustració d'Alagie" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4>
@@ -526,6 +529,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                         <img src={testimoniIsatuIcon1.src} width={'65%'} /><img src={testimoniIsatuIcon2.src} width={'35%'} />
                     </div>
                 </div>
+                <Picture src={testimoniIsatu} alt="Il·lustració d'Isatu" />
                 <p>
                     Imagina que has de fugir de ta casa per 
                     a protegir la teua filla de les tradicions 
@@ -544,7 +548,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                 </p>
             </section>
 
-            <Picture src={testimoniIsatu} alt="Il·lustració d'Isatu" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4><h4>Sierra Leone</h4>
@@ -590,6 +593,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniHarumIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniHarum} alt="Il·lustració de Harum" />
                 <p>
                     Imagina’t que fas un dur viatge pel desert fins a Líbia. Quan 
                     arribes a la frontera et segresten i t’amenacen de vendre’t 
@@ -600,7 +604,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     Tornar o embarcar-te i arriscar la teua vida per ells.
                 </p>
             </section>
-            <Picture src={testimoniHarum} alt="Il·lustració de Harum" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4><h4>Etiòpia</h4>
@@ -651,6 +654,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniMamadouIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniMamadou} alt="Il·lustració de Mamadou" />
                 <p>Imagina que ets estudiant universitari 
                     i pateixes pallisses i detencions 
                     il·legals per part del cos policial. 
@@ -666,7 +670,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     la frontera és un autèntic turment.
                 </p>
             </section>
-            <Picture src={testimoniMamadou} alt="Il·lustració de Mamadou" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4><h4>Mali</h4>
@@ -715,6 +718,7 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     </hgroup>
                     <img src={testimoniMabelIcon.src} width={'100%'} />
                 </div>
+                <Picture src={testimoniMabel} alt="Il·lustració de Mabel" />
                 <p>
                     Imagina que ta mare t’abandona quan tenies deu anys, amb 
                     setze te’n vas amb una amiga a Mali per a treballar en una 
@@ -727,7 +731,6 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
                     serà molt més fàcil.
                 </p>
             </section>
-            <Picture src={testimoniMabel} alt="Il·lustració de Mabel" />
             <section class="state">
                 <hgroup>
                 <h4>Situació actual</h4><h4>Níger</h4>
@@ -770,6 +773,12 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
     </main>
 </Layout>
 <style>
+    main {
+        padding-inline: var(--pico-block-spacing-horizontal);
+    }
+    main > h2 {
+        margin-top: calc(2.5 * var(--pico-block-spacing-vertical));
+    }
     :root hgroup :is(h3, h4) {
         font-family: var(--pico-font-family);
         letter-spacing: normal;
@@ -780,6 +789,39 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
         align-items: center;
         justify-items: center;
         gap: var(--pico-spacing);
+        margin-bottom: calc(3 * var(--pico-block-spacing-vertical));
+    }
+    .person {
+        display: grid;
+        grid-column: 1 / 3;
+        justify-self: stretch;
+        grid-template-columns: 3fr 4fr;
+        gap: var(--pico-spacing);
+        align-items: center;
+        justify-items: center;
+        min-width: 0;
+    }
+    .person .name,
+    .person > p {
+        grid-column: 1;
+        justify-self: stretch;
+        min-width: 0;
+    }
+    .person picture {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        min-width: 0;
+    }
+    .case > .state {
+        grid-column: 3;
+        min-width: 0;
+    }
+    .reverse .person .name,
+    .reverse .person > p {
+        grid-column: 2;
+    }
+    .reverse .person picture {
+        grid-column: 1;
     }
     .reverse {
         direction: rtl;
@@ -788,6 +830,9 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
         }
         .name {
             flex-direction: row;
+        }
+        .name hgroup {
+            text-align: right;
         }
     }
     .name {
@@ -835,10 +880,38 @@ import testimoniMabelIcon from '../assets/testimoni-mabel-icona.png';
         object-fit: contain;
     }
 
+@media (max-width: 1500px) {
+    .case {
+        display: block;
+    }
+    .person {
+        display: block;
+    }
+    .person picture {
+        float: right;
+        width: min(45%, 22rem);
+        margin: 0 0 1rem 1.5rem;
+    }
+    .reverse .person picture {
+        float: left;
+        margin: 0 1.5rem 1rem 0;
+    }    .case > .state {
+        clear: both;
+        margin-top: var(--pico-block-spacing-vertical);
+    }
+}
+
 @media (max-width: 700px) {
     .case {
         grid-template-columns: 1fr;
         margin-bottom: calc(4 * var(--pico-spacing));
+    }
+    .person picture,
+    .reverse .person picture {
+        float: none;
+        width: 100%;
+        max-width: 26rem;
+        margin: 0 auto 1rem;
     }
     :where([data-astro-image]) {
         max-height: 20rem;

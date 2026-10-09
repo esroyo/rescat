@@ -6,11 +6,11 @@ import Footer from '../components/Footer.astro';
 const { title = defaultTitle, description = defaultDescription } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 	<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="color-scheme" content="light dark">
+        <meta name="color-scheme" content="light">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={ Astro.generator } />
         <meta name="description" content={ description } />
@@ -96,23 +96,6 @@ const { title = defaultTitle, description = defaultDescription } = Astro.props;
 
   --pico-primary-focus: rgba(206, 51, 29, 0.5);
   --pico-primary-inverse: #fff;
-}
-
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]),
-  :host:not([data-theme]) {
-    --pico-text-selection-color: rgba(232, 103, 87, 0.1875);
-
-    --pico-primary: #e86757;
-    --pico-primary-background: #ce331d;
-    --pico-primary-underline: rgba(232, 103, 87, 0.5);
-
-    --pico-primary-hover: #f19a8e;
-    --pico-primary-hover-background: #df452e;
-
-    --pico-primary-focus: rgba(232, 103, 87, 0.375);
-    --pico-primary-inverse: #fff;
-  }
 }
 
 a:link,

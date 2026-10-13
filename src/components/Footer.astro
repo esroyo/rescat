@@ -15,15 +15,20 @@ import vaneCarmela from '../assets/vane-carmela.png';
         <dt>Direcció d’art</dt>
         <dd>Vane Julian i Carmela Forés</dd>
     </dl>
+    <p>
+    <small>&copy; 2026 &mdash; Vane Julian i Carmela Forés</small>
+    </p>
     </section>
     <Image alt="Vane i Carmela" src={vaneCarmela} layout={'constrained'}  />
 </footer>
 <style>
+    p,
     footer {
         margin-top: var(--pico-block-spacing-vertical);
         align-items: center;
         justify-items: center;
         background: var(--pico-primary-background);
+        padding-top: calc(2 * var(--pico-block-spacing-vertical));
         color: var(--pico-primary-inverse);
         h3,
         dl,
@@ -31,6 +36,8 @@ import vaneCarmela from '../assets/vane-carmela.png';
     a:hover,
     a:active,
     a:visited { color: inherit; }
+    dd { font-variant: small-caps; }
+    dt { font-style: italic; opacity: 0.8; }
 </style>
 <style is:global>
     a.constrast:hover .menu-icon path {

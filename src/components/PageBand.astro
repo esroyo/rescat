@@ -33,6 +33,7 @@ const { image, alt = '', title, objectPosition = 'center' } = Astro.props;
         object-fit: cover;
         object-position: var(--objectPosition);
         display: block;
+        filter: blur(0.1rem) grayscale(0.8);
     }
 
     .page-band-overlay {
